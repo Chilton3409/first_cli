@@ -15,12 +15,12 @@ my_parser = argparse.ArgumentParser(description="List the content of the folder"
 #example syntax, my_parser.add_argument('-c', '--create', action='store_true', help="X should equal one, hey we are learnign here")
 
 #basic math
-my_parser.add_argument('-m', '--multiply', action='store_true', help="Should multiply two numbers")
-my_parser.add_argument('-a', '--add', action='store_true', help="This will add the number you enter")
-my_parser.add_argument('-s', '--subtract', action='store_true', help="this will subtract this number against itself")
-my_parser.add_argument('-d', '--divide', action='store_true', help="This will divide the number you give it against itself.")
+my_parser.add_argument('-m', '--multiply', action='store_true', help="This will multiply x + y")
+my_parser.add_argument('-a', '--add', action='store_true', help="This will add x + y")
+my_parser.add_argument('-s', '--subtract', action='store_true', help="this will subtract x from y")
+my_parser.add_argument('-d', '--divide', action='store_true', help="This will divide x by y.")
 
-my_parser.add_argument('--square',action='store_true', help="Square value given")
+my_parser.add_argument('--square',action='store_true', help="Square x")
 
 args = my_parser.parse_args()
 
@@ -60,7 +60,15 @@ if args.subtract:
 if args.square:
     print(square(x=int(input("Enter value to sqaure\n"))))
 
+def main():
+    print('Welcome to my first cli')
 
+    pass
+
+
+if __name__=='__main':
+    #todo's ---add multiprocesser with pool cpu cores below-----
+    main()
 
 
 
