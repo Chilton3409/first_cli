@@ -25,6 +25,16 @@ class TestFirstCli(unittest.TestCase):
     def test_square(self):
         self.assertEqual(first_cli.square(8), 64)
 
+    def test_sub_polynomial(self):
+        self.assertEqual(first_cli.sub_polynomial(4,4), 0)
+
+    def test_add_polynomial(self):
+        self.assertEqual(first_cli.add_polynomial(3, 3), 18)
+        
+    def test_threevariables(self):
+        self.assertAlmostEqual(first_cli.threeVar(2, 2, 2), 36)
+    
+
     
 
 
