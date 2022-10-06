@@ -47,6 +47,18 @@ class TestFirstCli(unittest.TestCase):
     def test_create_exponent(self):
         self.assertEqual(first_cli.create_exponent(10, 2), 100)
 
+    def test_add_cube(self):
+        self.assertEqual(first_cli.add_cubic(2, 1), 27)
+    
+    def test_add_negative_cube(self):
+        self.assertEqual(first_cli.add_cubic(-2,1), -1)
+
+    def test_subtract_cube_root(self):
+        self.assertEqual(first_cli.sub_cube_root(2,1), 1)
+
+    def test_add_cubic_roots(self):
+        self.assertEqual(first_cli.add_cubic_root(2,2), 16)
+
 
 
 

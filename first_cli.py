@@ -58,6 +58,7 @@ def add_polynomial(x, y):
     y = square(y)
     return x + y
     
+
 #x^2 + a + b, or 3 var
 def threeVar(x, y, z):
     answer = x + y + z
@@ -68,8 +69,23 @@ def threeVar(x, y, z):
 def cube_root(x):
     x = x * x * x 
     return x 
+def add_cubic(x, y):
+    answer = add(x, y)
+    answer = cube_root(answer)
+    return answer
 
+def sub_cube_root(x, y):
+    answer = subtract(x, y)
+    answer = cube_root(answer)
+    return answer
+
+def add_cubic_root(x, y):
     
+    cubex = cube_root(x)
+    cubey = cube_root(y)
+    answer = add(x=cubex, y=cubey)
+    return answer
+
 #create an exponent
 def create_exponent(x, n):
     count = 0
@@ -120,8 +136,8 @@ if args.create_exponent:
 
 def main():
     print('Welcome to my first cli')
-
-    pass
+ 
+    
 
 
 if __name__=='__main':
