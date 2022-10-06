@@ -22,7 +22,8 @@ my_parser.add_argument('-d', '--divide', action='store_true', help="This will di
 my_parser.add_argument('-sp','--subtract_polynomial', action='store_true', help='this will subtract x^2 by y^2')
 my_parser.add_argument('-ap', '--add_polynomial', action='store_true', help="this will add x^2 plus y^2")
 my_parser.add_argument('-3v', '--three_vars', action='store_true', help="this will solve (x + y + z)^2")
-
+my_parser.add_argument('-c', '--cube_root', action='store_true', help="Create a cube root of x")
+my_parser.add_argument('-ex', '--create_exponent', action='store_true', help="Enter value of number and power to raise it by.")
 
 
 my_parser.add_argument('--square',action='store_true', help="Square x")
@@ -64,8 +65,17 @@ def threeVar(x, y, z):
 
 
 #working on cube roots
+def cube_root(x):
+    x = x * x * x 
+    return x 
 
     
+#create an exponent
+def create_exponent(x, n):
+    count = 0
+    while count <= n:
+        x = x * x
+        return x
 
 
        
@@ -96,6 +106,16 @@ if args.add_polynomial:
 
 if args.three_vars:
     print(threeVar(x=int(input("Enter a value for x\n")), y=int(input("enter a value for y\n")), z=int(input("Enter a value for z\n"))))
+
+if args.cube_root:
+    print(cube_root(x=int(input("Enter a value to for x to be cubed.\n"))))
+
+if args.create_exponent:
+    print(create_exponent(x=int(input("Enter a value to begin\n")), n=int(input("Raise x this power\n"))))
+
+
+
+
     
 
 def main():

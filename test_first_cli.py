@@ -14,9 +14,16 @@ class TestFirstCli(unittest.TestCase):
     
     def test_add(self):
         self.assertEqual(first_cli.add(2, 8), 10)
+    
+    def test_negative_numbers(self):
+        self.assertEqual(first_cli.add(-2, 8), 6)
+
 
     def test_subtract(self):
         self.assertEqual(first_cli.subtract(8, 2), 6)
+
+    def test_subtract_negatives(self):
+        self.assertEqual(first_cli.subtract(-2, -2), 0)
 
 
     def test_divide(self):
@@ -32,10 +39,14 @@ class TestFirstCli(unittest.TestCase):
         self.assertEqual(first_cli.add_polynomial(3, 3), 18)
         
     def test_threevariables(self):
-        self.assertAlmostEqual(first_cli.threeVar(2, 2, 2), 36)
+        self.assertEqual(first_cli.threeVar(2, 2, 2), 36)
     
+    def test_cube_root(self):
+        self.assertEqual(first_cli.cube_root(2), 8)
 
-    
+    def test_create_exponent(self):
+        self.assertEqual(first_cli.create_exponent(10, 2), 100)
+
 
 
 
